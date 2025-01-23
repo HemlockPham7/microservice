@@ -14,12 +14,11 @@ import lombok.Setter;
 @NoArgsConstructor
 public class Book {
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
     private String id;
 
     private String name;
     private String author;
-    private Boolean idReady;
+    private Boolean isReady;
 
 
 }
