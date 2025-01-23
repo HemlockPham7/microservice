@@ -15,6 +15,6 @@ public class CreateBookCommand {
     private String id;
     private String name;
     private String author;
-    private Boolean idReady;
+    private Boolean isReady;
 
 }

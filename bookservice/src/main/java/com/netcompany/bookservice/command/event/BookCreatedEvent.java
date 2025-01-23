@@ -14,5 +14,5 @@ public class BookCreatedEvent {
 
     private String name;
     private String author;
-    private Boolean idReady;
+    private Boolean isReady;
 }
