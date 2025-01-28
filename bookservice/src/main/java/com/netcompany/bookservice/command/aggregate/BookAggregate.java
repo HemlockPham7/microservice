@@ -52,23 +52,23 @@ public class BookAggregate {
 
     // After publishing an event, that event should be listened somewhere
     @EventSourcingHandler
-    public void on(BookCreatedEvent bookCreatedEvent) {
-        this.id = bookCreatedEvent.getId();
-        this.name = bookCreatedEvent.getName();
-        this.author = bookCreatedEvent.getAuthor();
-        this.isReady = bookCreatedEvent.getIsReady();
+    public void on(BookCreatedEvent event){
+        this.id = event.getId();
+        this.name = event.getName();
+        this.author = event.getAuthor();
+        this.isReady = event.getIsReady();
     }
 
     @EventSourcingHandler
-    public void on(BookUpdatedEvent bookUpdatedEvent) {
-        this.id = bookUpdatedEvent.getId();
-        this.name = bookUpdatedEvent.getName();
-        this.author = bookUpdatedEvent.getAuthor();
-        this.isReady = bookUpdatedEvent.getIsReady();
+    public void on(BookUpdatedEvent event){
+        this.id = event.getId();
+        this.name = event.getName();
+        this.author = event.getAuthor();
+        this.isReady = event.getIsReady();
     }
 
     @EventSourcingHandler
-    public void on(BookDeletedEvent bookDeletedEvent) {
-        this.id = bookDeletedEvent.getId();
+    public void on(BookDeletedEvent event){
+        this.id = event.getId();
     }
 }

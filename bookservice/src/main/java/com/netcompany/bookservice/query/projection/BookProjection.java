@@ -27,13 +27,6 @@ public class BookProjection {
             BeanUtils.copyProperties(book, model);
             listBookResponse.add(model);
         });
-
-//        List<BookResponseModel> result = list.stream().map(book -> {
-//            BookResponseModel model = new BookResponseModel();
-//            BeanUtils.copyProperties(book, model);
-//            return model;
-//        }).toList();
-
         return listBookResponse;
     }
 

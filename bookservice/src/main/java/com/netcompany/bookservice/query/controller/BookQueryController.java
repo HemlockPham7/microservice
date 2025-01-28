@@ -26,7 +26,7 @@ public class BookQueryController {
         return queryGateway.query(query, ResponseTypes.multipleInstancesOf(BookResponseModel.class)).join();
     }
 
-    @GetMapping("{BookId}")
+    @GetMapping("{bookId}")
     public BookResponseModel getBookDetail(@PathVariable String bookId) {
         GetBookDetailQuery query = new GetBookDetailQuery(bookId);
         return queryGateway.query(query, ResponseTypes.instanceOf(BookResponseModel.class)).join();
